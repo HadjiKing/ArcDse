@@ -2,10 +2,11 @@ import "package:arcdse/features/settings/settings_stores.dart";
 import "package:arcdse/services/localization/ar.dart";
 import "package:arcdse/services/localization/en.dart";
 import "package:arcdse/services/localization/es.dart";
+import "package:arcdse/services/localization/fr.dart";
 import "package:fluent_ui/fluent_ui.dart";
 
 class _Localization {
-  List<En> list = [En(), Ar(), Es()];
+  List<En> list = [En(), Ar(), Es(), Fr()];
   En get s => list[localSettings.selectedLocale];
   bool get isRtl => s.$direction == Direction.rtl; // Arabic is RTL
 }
