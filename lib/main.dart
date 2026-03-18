@@ -1,0 +1,28 @@
+import 'package:arcdse/app/app.dart';
+import 'package:arcdse/services/notifications/core_notifications_initializer.dart';
+import 'package:arcdse/utils/init_stores.dart';
+import 'package:fluent_ui/fluent_ui.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
+import 'package:logging/logging.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Logger.root.onRecord.listen((record) {
+    // ignore: avoid_print
+    print('>>> ${record.level.name}: ${record.time}: ${record.message}');
+  });
+
+  // initialize receiving notifications
+  // on Android and iOS
+  if (kIsWeb == false) await Messaging.initializeReceiving();
+
+  // initialize stores
+  initializeStores();
+
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarIconBrightness: Brightness.dark,
+    systemNavigationBarIconBrightness: Brightness.dark,
+  ));
+  runApp(const ArcDseApp());
+}
