@@ -1,7 +1,7 @@
 import 'package:logging/logging.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
-final log = Logger('ArcDseLogger');
+final log = Logger('ARCDSELogger');
 
 /// 1 = severe, 2 = warning, 3 = info
 void logger(Object msg, StackTrace? stacktrace, [int importance = 0]) {

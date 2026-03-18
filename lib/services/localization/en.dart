@@ -508,11 +508,11 @@ class En {
         "Are you sure you want to close this panel? Any unsaved changes will be lost.",
     "sure": "Sure",
     "back": "Back",
-    "firstLaunchDialogTitle": "Welcome to ArcDse",
+    "firstLaunchDialogTitle": "Welcome to ARCDSE",
     "firstLaunchDialogContent":
-        "You have successfully installed ArcDse. However, for better experience and for real-world use, you'll have a couple of things to configure. Scan the QR code below to get started.",
+        "You have successfully installed ARCDSE Dental Clinic Management Software. However, for better experience and for real-world use, you'll have a couple of things to configure. Scan the QR code below to get started.",
     "newVersionDialogTitle": "New version available",
     "newVersionDialogContent":
-        "A new version of ArcDse is available. Please update to the latest version to get the best experience. Scan the QR code below to get started.",
+        "A new version of ARCDSE is available. Please update to the latest version to get the best experience. Scan the QR code below to get started.",
   };
 }

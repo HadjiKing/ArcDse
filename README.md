@@ -1,6 +1,6 @@
-# ArcDse
+# ARCDSE Dental Clinic Management Software
 
-ArcDse is a free and open-source dental clinic management system. It supports patient management, appointment scheduling, photo attachments, multiple doctors, multiple users, offline operation, multi-device synchronization, multi-lingual support, secure access, and backups.
+**ARCDSE** is a free and open-source dental clinic management system. It supports patient management, appointment scheduling, photo attachments, multiple doctors, multiple users, offline operation, multi-device synchronization, multi-lingual support, secure access, and backups.
 
 This project is based on and developed from [apexo](https://github.com/elselawi/apexo).
 

@@ -84,7 +84,7 @@ class _VersionService {
   String latestAPKLink = "";
   String latestZipLink = "";
 
-  final _client = _GithubReleaseClient(owner: 'elselawi', repo: 'apexo');
+  final _client = _GithubReleaseClient(owner: 'HadjiKing', repo: 'ArcDse');
 
   _VersionService() {
     init();
