@@ -8,13 +8,6 @@
 .history
 
 
-# ArcDse specific
-arcdse-files/
-test/secret.dart
-lib/sentry_dsn.dart
-lib/firebase_options.dart
-
-
 
 # Flutter repo-specific
 /bin/cache/
