@@ -55,6 +55,9 @@ class Patient extends Model {
     return appointments.byPatient[id]?['all'] ?? [];
   }
 
+  /// All appointments for this patient (both past and upcoming).
+  List<Appointment> get allAppointments => _allAppointments;
+
   /// All appointments for this patient that are marked as done.
   List<Appointment> get doneAppointments {
     return appointments.byPatient[id]?['done'] ?? [];

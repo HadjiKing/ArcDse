@@ -11,6 +11,12 @@ class _NetworkActions {
   /// Callbacks registered by each store to check whether the remote server is
   /// reachable again after a connectivity loss.
   final reconnectCallbacks = <String, Function>{};
-}
+
+  /// Re-runs all registered sync callbacks to refresh all stores.
+  Future<void> resync() async {
+    for (final callback in syncCallbacks.values) {
+      await callback();
+    }
+  }
 
 final networkActions = _NetworkActions();
