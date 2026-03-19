@@ -43,7 +43,7 @@ class GridGallery extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             FutureBuilder<String?>(
-              future: getImgUrl(rowId, img),
+              future: Future.value(getImgUrl(rowId, img)),
               builder: (context, snap) {
                 if (!snap.hasData || snap.data == null) {
                   return const Center(child: ProgressRing());
