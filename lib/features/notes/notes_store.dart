@@ -1,63 +1,66 @@
-import '../../core/store.dart';
+import 'package:arcdse/features/login/login_controller.dart';
+import 'package:arcdse/services/archived.dart';
+import 'package:arcdse/services/launch.dart';
+import 'package:arcdse/services/network.dart';
+import 'package:arcdse/utils/hash.dart';
+import 'package:arcdse/utils/demo_generator.dart';
+
 import '../../core/save_local.dart';
 import '../../core/save_remote.dart';
+import '../network_actions/network_actions_controller.dart';
 import '../../services/login.dart';
-import '../../utils/demo_generator.dart';
 import 'notes_model.dart';
+import '../../core/store.dart';
+
+const _storeName = "notes";
 
 class Notes extends Store<Note> {
-  Notes() : super(
-    modeling: (json) => Note.fromJson(json),
-    local: SaveLocal("notes"),
-    remote: login.isDemo ? null : SaveRemote("notes"),
-    isDemo: login.isDemo,
-  );
+  Notes()
+      : super(
+          modeling: Note.fromJson,
+          isDemo: launch.isDemo,
+          showArchived: showArchived,
+          onSyncStart: () {
+            networkActions.isSyncing(networkActions.isSyncing() + 1);
+          },
+          onSyncEnd: () {
+            networkActions.isSyncing(networkActions.isSyncing() - 1);
+          },
+        );
 
   @override
-  void init() {
+  init() {
     super.init();
-    
-    // Load demo data if in demo mode
-    if (login.isDemo) {
-      Future.delayed(const Duration(milliseconds: 100), () {
-        final demoData = demoNotes(20);
-        observableMap.setAll(demoData);
-      });
-    }
-  }
+    login.activators[_storeName] = () async {
+      await loaded;
 
-  Future<void> addNote(String content, String authorID) async {
-    final note = Note.fromJson({});
-    note.title = content.length > 30 ? '${content.substring(0, 30)}...' : content;
-    note.content = content;
-    note.date = DateTime.now().toIso8601String();
-    note.authorID = authorID;
-    
-    observableMap.set(note);
-  }
+      local = SaveLocal(name: _storeName, uniqueId: simpleHash(login.url));
+      await deleteMemoryAndLoadFromPersistence();
 
-  List<Note> get allNotes => observableMap.values;
+      if (launch.isDemo) {
+        if (docs.isEmpty) setAll(demoNotes(20));
+      } else {
+        remote = SaveRemote(
+          pbInstance: login.pb!,
+          storeName: _storeName,
+          onOnlineStatusChange: (current) {
+            if (network.isOnline() != current) {
+              network.isOnline(current);
+            }
+          },
+        );
+      }
 
-  List<Note> get recentNotes {
-    final notes = allNotes;
-    notes.sort((a, b) => b.date.compareTo(a.date));
-    return notes.take(10).toList();
-  }
+      return () async {
+        loginCtrl.loadingIndicator("Synchronizing notes");
+        await synchronize();
+        networkActions.syncCallbacks[_storeName] = synchronize;
+        networkActions.reconnectCallbacks[_storeName] = remote!.checkOnline;
 
-  Note? getById(String id) => observableMap.get(id);
-
-  void deleteNote(String id) {
-    observableMap.remove(id);
-  }
-
-  Future<void> updateNote(String id, String content) async {
-    final note = getById(id);
-    if (note != null) {
-      note.content = content;
-      note.title = content.length > 30 ? '${content.substring(0, 30)}...' : content;
-      note.date = DateTime.now().toIso8601String();
-      observableMap.set(note);
-    }
+        network.onOnline[_storeName] = synchronize;
+        network.onOffline[_storeName] = cancelRealtimeSub;
+      };
+    };
   }
 }
 

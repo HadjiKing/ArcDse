@@ -127,7 +127,7 @@ List<Expense> demoExpenses(int count) {
   for (int i = 0; i < orderCount; i++) {
     final order = Expense.fromJson({});
     order.isSupplier = false;
-    order.supplierID = suppliers.isNotEmpty ? suppliers[_random.nextInt(suppliers.length)].id : '';
+    order.supplierId = suppliers.isNotEmpty ? suppliers[_random.nextInt(suppliers.length)].id : '';
     order.processed = _random.nextBool();
     order.cost = 10 + _random.nextDouble() * 490; // 10-500 USD
     order.date = DateTime.now().subtract(Duration(days: _random.nextInt(180))).toIso8601String();

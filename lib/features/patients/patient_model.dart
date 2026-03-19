@@ -1,3 +1,5 @@
+import '../appointments/appointment_model.dart';
+import '../appointments/appointments_store.dart';
 import '../core/model.dart';
 
 class Patient extends Model {
@@ -16,11 +18,12 @@ class Patient extends Model {
   String get name => super.title;
   set name(String value) => super.title = value;
 
-  // Computed properties
-  String get allAppointments {
-    // This would be populated by the appointments store
-    return '';
-  }
+  // Appointment accessors via the appointments store
+  List<Appointment> get allAppointments =>
+      appointments.byPatient[id]?["all"] ?? [];
+
+  List<Appointment> get doneAppointments =>
+      appointments.byPatient[id]?["done"] ?? [];
 
   String get subtitleLine1 => phone.isNotEmpty ? phone : email;
   

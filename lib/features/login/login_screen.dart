@@ -131,29 +131,16 @@ class _LoginState extends State<Login> {
     final password = loginCtrl.passwordField.text.trim();
 
     if (url.isEmpty || email.isEmpty || password.isEmpty) {
-      loginCtrl.finishedLoginProcess(txt("fillAllFields"));
+      loginCtrl.loginError(txt("fillAllFields"));
       return;
     }
 
-    loginCtrl.startLoginProcess(txt("loggingIn"));
-    
-    try {
-      await login.activate(url, email, password);
-      loginCtrl.finishedLoginProcess();
-    } catch (e) {
-      loginCtrl.finishedLoginProcess(e.toString());
-    }
+    // login.activate manages loginCtrl.loadingIndicator and loginCtrl.loginError internally
+    await login.activate(url, [email, password], true);
   }
 
   void _handleDemoMode() async {
-    loginCtrl.startLoginProcess(txt("loadingDemo"));
-    
-    try {
-      // Activate demo mode with empty credentials
-      await login.activate("", "", "");
-      loginCtrl.finishedLoginProcess();
-    } catch (e) {
-      loginCtrl.finishedLoginProcess(e.toString());
-    }
+    // login.activate manages loginCtrl.loadingIndicator and loginCtrl.loginError internally
+    await login.activate("", [], false);
   }
 }

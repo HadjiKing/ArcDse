@@ -80,8 +80,15 @@ class Expenses extends Store<Expense> {
     return items.toList();
   }
 
-  List<Expense> get suppliers =>
-      expenses.present.values.where((e) => e.isSupplier).toList();
+  List<Expense> get suppliers {
+    final allOrders = present.values.where((e) => e.isOrder).toList();
+    return present.values.where((e) => e.isSupplier).map((supplier) {
+      supplier.duePayments = allOrders
+          .where((o) => o.supplierId == supplier.id && !o.processed)
+          .fold(0.0, (sum, o) => sum + o.cost);
+      return supplier;
+    }).toList();
+  }
 }
 
 final expenses = Expenses();
