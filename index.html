@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Simo Deco – Premium B2B Furniture Catalog. Elegant furniture for offices, hotels, restaurants, and clinics. Local manufacturing, free 3D designs." />
+  <title>Simo Deco – Premium B2B Furniture Catalog</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ========================================
+     TOP BAR – MARQUEE
+     ======================================== -->
+<div id="top-bar" aria-label="Promotional announcements">
+  <div class="marquee-track">
+    <!-- Repeated twice for seamless loop -->
+    <span class="marquee-item"><i class="fa-solid fa-truck-fast accent"></i> <span>Free delivery across <span class="accent">58 Wilayas</span> for orders over 500 000 DZD</span></span>
+    <span class="marquee-dot">•</span>
+    <span class="marquee-item"><i class="fa-solid fa-star accent"></i> <span>Trusted by <span class="accent">1 200+</span> businesses in Algeria</span></span>
+    <span class="marquee-dot">•</span>
+    <span class="marquee-item"><i class="fa-solid fa-palette accent"></i> <span>Free <span class="accent">3D design service</span> included with every B2B order</span></span>
+    <span class="marquee-dot">•</span>
+    <span class="marquee-item"><i class="fa-solid fa-award accent"></i> <span><span class="accent">15+ years</span> of furniture excellence – 100% local manufacturing</span></span>
+    <span class="marquee-dot">•</span>
+    <!-- duplicate for seamless looping -->
+    <span class="marquee-item"><i class="fa-solid fa-truck-fast accent"></i> <span>Free delivery across <span class="accent">58 Wilayas</span> for orders over 500 000 DZD</span></span>
+    <span class="marquee-dot">•</span>
+    <span class="marquee-item"><i class="fa-solid fa-star accent"></i> <span>Trusted by <span class="accent">1 200+</span> businesses in Algeria</span></span>
+    <span class="marquee-dot">•</span>
+    <span class="marquee-item"><i class="fa-solid fa-palette accent"></i> <span>Free <span class="accent">3D design service</span> included with every B2B order</span></span>
+    <span class="marquee-dot">•</span>
+    <span class="marquee-item"><i class="fa-solid fa-award accent"></i> <span><span class="accent">15+ years</span> of furniture excellence – 100% local manufacturing</span></span>
+    <span class="marquee-dot">•</span>
+  </div>
+</div>
+
+<!-- ========================================
+     NAVBAR
+     ======================================== -->
+<header id="navbar" role="banner">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Simo Deco home">
+        <div class="logo-mark">SD</div>
+        <div class="logo-text">
+          <span>Simo Deco</span>
+          <span>B2B Furniture</span>
+        </div>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#hero"           class="active">Home</a></li>
+        <li><a href="#catalog">B2B Catalog</a></li>
+        <li><a href="#features">CHR Sector</a></li>
+        <li><a href="#footer">About</a></li>
+      </ul>
+
+      <!-- Right actions -->
+      <div class="nav-right">
+
+        <!-- Language switcher -->
+        <div class="lang-switcher" aria-label="Language">
+          <button class="lang-btn" id="lang-btn" aria-haspopup="listbox" aria-expanded="false">
+            <span class="flag">🇬🇧</span>
+            <span class="lang-code">EN</span>
+            <span class="arrow">▾</span>
+          </button>
+          <div class="lang-dropdown" id="lang-dropdown" role="listbox">
+            <a href="#" role="option"><span class="flag">🇬🇧</span><span class="lang-code">EN</span> English</a>
+            <a href="#" role="option"><span class="flag">🇫🇷</span><span class="lang-code">FR</span> Français</a>
+            <a href="#" role="option"><span class="flag">🇩🇿</span><span class="lang-code">AR</span> العربية</a>
+          </div>
+        </div>
+
+        <!-- Request Quote -->
+        <a href="#product-details" class="quote-btn" aria-label="Request a quote">
+          <i class="fa-solid fa-file-invoice"></i>
+          Request Quote
+          <span class="quote-count" id="quote-count">0</span>
+        </a>
+
+        <!-- Hamburger (mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="#hero">Home</a>
+    <a href="#catalog">B2B Catalog</a>
+    <a href="#features">CHR Sector</a>
+    <a href="#footer">About</a>
+    <a href="#product-details" style="color:var(--orange);font-weight:800;">Request Quote</a>
+  </div>
+</header>
+
+<!-- ========================================
+     HERO SECTION
+     ======================================== -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- LEFT: Text + CTAs -->
+      <div class="hero-left">
+        <div class="hero-badge">
+          <div class="dot"></div>
+          Premium B2B Collection 2024
+        </div>
+
+        <h1 class="hero-title">
+          Elegant Furniture That<br>
+          <span class="highlight">Enhances Your</span><br>
+          Workspace
+        </h1>
+
+        <p class="hero-desc">
+          From executive offices to luxury hotels and modern clinics — discover our curated range of locally-crafted furniture built for businesses that demand quality.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#catalog" class="btn btn-primary">
+            <i class="fa-solid fa-table-cells-large"></i>
+            Browse Catalog
+          </a>
+          <a href="#product-details" class="btn btn-outline">
+            <i class="fa-regular fa-comment-dots"></i>
+            Free Consultation
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num count-up" data-target="15" data-suffix="+">15+</div>
+            <div class="lbl">Years Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num count-up" data-target="1200" data-suffix="+">1200+</div>
+            <div class="lbl">Business Clients</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num count-up" data-target="58" data-suffix="">58</div>
+            <div class="lbl">Wilayas Covered</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num count-up" data-target="100" data-suffix="%">100%</div>
+            <div class="lbl">Local Made</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Image Slider -->
+      <div class="hero-right">
+        <!-- Floating badge -->
+        <div class="floating-badge" aria-label="Fast delivery">
+          <div class="badge-icon">🚚</div>
+          <div class="badge-text">
+            <strong>Fast Delivery</strong>
+            <span>to all 58 Wilayas</span>
+          </div>
+        </div>
+
+        <div class="slider-wrap">
+          <div class="slider-track" id="slider" aria-label="Product carousel">
+
+            <!-- Slide 1: Executive Chair -->
+            <div class="slide active" aria-label="Executive Chair">
+              <svg class="chair-svg" viewBox="0 0 320 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- seat base -->
+                <rect x="80" y="200" width="160" height="20" rx="10" fill="#F57224"/>
+                <!-- seat pad -->
+                <rect x="70" y="180" width="180" height="28" rx="10" fill="#FFD9C0"/>
+                <!-- backrest -->
+                <rect x="90" y="80" width="140" height="110" rx="18" fill="#F57224"/>
+                <rect x="102" y="92" width="116" height="86" rx="12" fill="#FFD9C0"/>
+                <!-- headrest -->
+                <rect x="105" y="52" width="110" height="40" rx="10" fill="#F57224"/>
+                <!-- armrests -->
+                <rect x="62" y="170" width="20" height="70" rx="8" fill="#D45F10"/>
+                <rect x="238" y="170" width="20" height="70" rx="8" fill="#D45F10"/>
+                <rect x="52" y="188" width="36" height="12" rx="6" fill="#E8C5A5"/>
+                <rect x="232" y="188" width="36" height="12" rx="6" fill="#E8C5A5"/>
+                <!-- gas lift -->
+                <rect x="148" y="220" width="24" height="60" rx="6" fill="#8A9BB0"/>
+                <!-- wheel base -->
+                <ellipse cx="160" cy="294" rx="70" ry="12" fill="#6B7589"/>
+                <line x1="90" y1="294" x2="160" y2="294" stroke="#6B7589" stroke-width="6" stroke-linecap="round"/>
+                <line x1="230" y1="294" x2="160" y2="294" stroke="#6B7589" stroke-width="6" stroke-linecap="round"/>
+                <line x1="116" y1="270" x2="160" y2="294" stroke="#6B7589" stroke-width="6" stroke-linecap="round"/>
+                <line x1="204" y1="270" x2="160" y2="294" stroke="#6B7589" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="90"  cy="300" r="10" fill="#444"/>
+                <circle cx="230" cy="300" r="10" fill="#444"/>
+                <circle cx="116" cy="280" r="10" fill="#444"/>
+                <circle cx="204" cy="280" r="10" fill="#444"/>
+                <circle cx="160" cy="300" r="10" fill="#444"/>
+              </svg>
+            </div>
+
+            <!-- Slide 2: Conference Chair -->
+            <div class="slide" aria-label="Conference Chair">
+              <svg class="chair-svg" viewBox="0 0 320 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- backrest -->
+                <rect x="95" y="90" width="130" height="120" rx="14" fill="#002D62"/>
+                <rect x="108" y="104" width="104" height="92" rx="10" fill="#003B80"/>
+                <!-- seat -->
+                <rect x="78" y="200" width="164" height="26" rx="10" fill="#002D62"/>
+                <!-- legs -->
+                <rect x="108" y="226" width="14" height="80" rx="6" fill="#8A9BB0"/>
+                <rect x="198" y="226" width="14" height="80" rx="6" fill="#8A9BB0"/>
+                <!-- feet -->
+                <rect x="88"  y="300" width="54" height="12" rx="6" fill="#6B7589"/>
+                <rect x="178" y="300" width="54" height="12" rx="6" fill="#6B7589"/>
+                <!-- armrests -->
+                <rect x="66" y="196" width="20" height="60" rx="6" fill="#003B80"/>
+                <rect x="234" y="196" width="20" height="60" rx="6" fill="#003B80"/>
+              </svg>
+            </div>
+
+            <!-- Slide 3: Lounge Sofa -->
+            <div class="slide" aria-label="Lounge Sofa">
+              <svg class="chair-svg" viewBox="0 0 360 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- sofa base -->
+                <rect x="40" y="160" width="280" height="50" rx="16" fill="#F57224"/>
+                <!-- cushions -->
+                <rect x="54" y="120" width="110" height="50" rx="12" fill="#FFD9C0"/>
+                <rect x="176" y="120" width="110" height="50" rx="12" fill="#FFD9C0"/>
+                <!-- backrest -->
+                <rect x="40" y="70" width="280" height="60" rx="14" fill="#D45F10"/>
+                <!-- armrests -->
+                <rect x="20"  y="100" width="28" height="110" rx="10" fill="#D45F10"/>
+                <rect x="312" y="100" width="28" height="110" rx="10" fill="#D45F10"/>
+                <!-- legs -->
+                <rect x="54"  y="208" width="18" height="36" rx="6" fill="#8A9BB0"/>
+                <rect x="134" y="208" width="18" height="36" rx="6" fill="#8A9BB0"/>
+                <rect x="208" y="208" width="18" height="36" rx="6" fill="#8A9BB0"/>
+                <rect x="288" y="208" width="18" height="36" rx="6" fill="#8A9BB0"/>
+              </svg>
+            </div>
+
+            <!-- Slide 4: Bar Stool -->
+            <div class="slide" aria-label="Bar Stool">
+              <svg class="chair-svg" viewBox="0 0 280 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- seat -->
+                <ellipse cx="140" cy="130" rx="80" ry="24" fill="#002D62"/>
+                <ellipse cx="140" cy="122" rx="80" ry="24" fill="#003B80"/>
+                <!-- backrest -->
+                <rect x="100" y="52" width="80" height="80" rx="12" fill="#002D62"/>
+                <rect x="112" y="64" width="56" height="56" rx="8" fill="#003B80"/>
+                <!-- stem -->
+                <rect x="128" y="154" width="24" height="100" rx="8" fill="#8A9BB0"/>
+                <!-- ring foot rest -->
+                <ellipse cx="140" cy="220" rx="56" ry="10" fill="none" stroke="#6B7589" stroke-width="8"/>
+                <!-- base -->
+                <ellipse cx="140" cy="274" rx="72" ry="14" fill="#6B7589"/>
+                <line x1="80"  y1="274" x2="140" y2="254" stroke="#6B7589" stroke-width="7" stroke-linecap="round"/>
+                <line x1="200" y1="274" x2="140" y2="254" stroke="#6B7589" stroke-width="7" stroke-linecap="round"/>
+                <line x1="140" y1="274" x2="140" y2="254" stroke="#6B7589" stroke-width="7" stroke-linecap="round"/>
+                <circle cx="80"  cy="278" r="9" fill="#444"/>
+                <circle cx="200" cy="278" r="9" fill="#444"/>
+                <circle cx="126" cy="278" r="9" fill="#444"/>
+                <circle cx="154" cy="278" r="9" fill="#444"/>
+              </svg>
+            </div>
+
+          </div><!-- /slider-track -->
+
+          <!-- Dots -->
+          <div class="slider-dots" role="tablist" aria-label="Slide controls">
+            <button class="slider-dot active" aria-label="Slide 1" role="tab"></button>
+            <button class="slider-dot" aria-label="Slide 2" role="tab"></button>
+            <button class="slider-dot" aria-label="Slide 3" role="tab"></button>
+            <button class="slider-dot" aria-label="Slide 4" role="tab"></button>
+          </div>
+
+          <!-- Arrows -->
+          <div class="slider-arrows">
+            <button class="slider-arrow" id="slider-prev" aria-label="Previous slide">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow" id="slider-next" aria-label="Next slide">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div><!-- /slider-wrap -->
+      </div><!-- /hero-right -->
+
+    </div><!-- /hero-inner -->
+  </div>
+</section>
+
+<!-- ========================================
+     FEATURES SECTION
+     ======================================== -->
+<section id="features">
+  <div class="container">
+    <div class="features-header">
+      <span class="section-tag">Why Simo Deco</span>
+      <h2 class="section-title">Built for Business Excellence</h2>
+      <p class="section-sub">We partner with offices, hotels, restaurants, and clinics across Algeria to deliver furniture that works as hard as you do.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <!-- Card 1: Trust -->
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <span class="feature-num count-up" data-target="15" data-suffix="+">15+</span>
+        <h3>Years of Expertise</h3>
+        <p>Since 2009, we've been Algeria's go-to partner for commercial furniture. Our deep industry knowledge ensures every piece meets professional standards.</p>
+      </div>
+
+      <!-- Card 2: Quality -->
+      <div class="feature-card">
+        <div class="feature-icon">🇩🇿</div>
+        <span class="feature-num count-up" data-target="100" data-suffix="%">100%</span>
+        <h3>Local Manufacturing</h3>
+        <p>Every product is crafted in Algeria using premium materials. Supporting local industry means faster delivery, better quality control, and competitive prices.</p>
+      </div>
+
+      <!-- Card 3: Service -->
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <span class="feature-num count-up" data-target="3" data-suffix="D">3D</span>
+        <h3>Free Design Service</h3>
+        <p>Our design team creates free 3D layouts of your space so you can visualize the final result before placing a single order. Zero guesswork.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================
+     CATALOG SECTION
+     ======================================== -->
+<section id="catalog">
+  <div class="container">
+    <div class="catalog-header">
+      <div>
+        <span class="section-tag">Corporate Catalog</span>
+        <h2 class="section-title">Find Your Perfect Fit</h2>
+        <p class="section-sub">Minimum order: 10 units per product. Bulk pricing available.</p>
+      </div>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="filter-bar" role="group" aria-label="Filter products">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="office">Office</button>
+      <button class="filter-btn" data-filter="chr">CHR</button>
+      <button class="filter-btn" data-filter="metal">Metal</button>
+      <button class="filter-btn" data-filter="wood">Wood</button>
+      <button class="filter-btn" data-filter="plastic">Plastic</button>
+    </div>
+
+    <!-- Product grid -->
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <article class="product-card" data-category="office">
+        <div class="product-img-wrap">
+          <span class="product-tag">Office</span>
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Executive Pro Chair">
+            <rect x="55" y="130" width="90" height="14" rx="7" fill="#F57224"/>
+            <rect x="50" y="116" width="100" height="18" rx="7" fill="#FFD9C0"/>
+            <rect x="60" y="52" width="80" height="72" rx="12" fill="#F57224"/>
+            <rect x="68" y="60" width="64" height="54" rx="8" fill="#FFD9C0"/>
+            <rect x="44" y="108" width="12" height="46" rx="5" fill="#D45F10"/>
+            <rect x="144" y="108" width="12" height="46" rx="5" fill="#D45F10"/>
+            <rect x="92" y="144" width="16" height="38" rx="5" fill="#8A9BB0"/>
+            <ellipse cx="100" cy="188" rx="40" ry="7" fill="#6B7589"/>
+            <circle cx="64"  cy="192" r="6" fill="#333"/>
+            <circle cx="136" cy="192" r="6" fill="#333"/>
+            <circle cx="82"  cy="182" r="6" fill="#333"/>
+            <circle cx="118" cy="182" r="6" fill="#333"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Executive Pro Chair</h3>
+          <p class="product-desc">High-back ergonomic executive chair. Lumbar support, adjustable height.</p>
+          <div class="product-swatches" aria-label="Available colors">
+            <div class="swatch active" style="background:#002D62" title="Navy Blue"></div>
+            <div class="swatch"        style="background:#1A1A1A" title="Matte Black"></div>
+            <div class="swatch"        style="background:#8B4513" title="Brown Leather"></div>
+            <div class="swatch"        style="background:#C0C0C0" title="Silver Gray"></div>
+          </div>
+          <div class="product-footer">
+            <span class="product-moq">MOQ: <span>10 units</span></span>
+            <button class="btn-view">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product-card" data-category="chr">
+        <div class="product-img-wrap">
+          <span class="product-tag">CHR</span>
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bistro Stack Chair">
+            <rect x="56" y="52" width="88" height="78" rx="12" fill="#002D62"/>
+            <rect x="66" y="62" width="68" height="58" rx="8" fill="#003B80"/>
+            <rect x="48" y="118" width="104" height="18" rx="8" fill="#002D62"/>
+            <rect x="64" y="136" width="12" height="52" rx="5" fill="#8A9BB0"/>
+            <rect x="124" y="136" width="12" height="52" rx="5" fill="#8A9BB0"/>
+            <rect x="42"  y="182" width="44" height="10" rx="5" fill="#6B7589"/>
+            <rect x="114" y="182" width="44" height="10" rx="5" fill="#6B7589"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Bistro Stack Chair</h3>
+          <p class="product-desc">Stackable restaurant chair. Durable polypropylene, easy to clean and store.</p>
+          <div class="product-swatches" aria-label="Available colors">
+            <div class="swatch active" style="background:#002D62" title="Navy"></div>
+            <div class="swatch"        style="background:#C0392B" title="Red"></div>
+            <div class="swatch"        style="background:#27AE60" title="Green"></div>
+            <div class="swatch"        style="background:#E8E8E8" title="White"></div>
+          </div>
+          <div class="product-footer">
+            <span class="product-moq">MOQ: <span>20 units</span></span>
+            <button class="btn-view">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="product-card" data-category="metal">
+        <div class="product-img-wrap">
+          <span class="product-tag">Metal</span>
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Industrial Steel Stool">
+            <ellipse cx="100" cy="74" rx="52" ry="16" fill="#8A9BB0"/>
+            <ellipse cx="100" cy="66" rx="52" ry="16" fill="#B0BCCF"/>
+            <rect x="92"  y="82" width="16" height="68" rx="6" fill="#8A9BB0"/>
+            <ellipse cx="100" cy="160" rx="46" ry="10" fill="#6B7589"/>
+            <line x1="60"  y1="160" x2="92"  y2="140" stroke="#6B7589" stroke-width="6" stroke-linecap="round"/>
+            <line x1="140" y1="160" x2="108" y2="140" stroke="#6B7589" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="58"  cy="164" r="7" fill="#444"/>
+            <circle cx="142" cy="164" r="7" fill="#444"/>
+            <circle cx="80"  cy="158" r="7" fill="#444"/>
+            <circle cx="120" cy="158" r="7" fill="#444"/>
+            <ellipse cx="100" cy="120" rx="36" ry="6" fill="none" stroke="#6B7589" stroke-width="5"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Industrial Steel Stool</h3>
+          <p class="product-desc">Heavy-duty metal bar stool with footrest ring. Powder-coated finish.</p>
+          <div class="product-swatches" aria-label="Available colors">
+            <div class="swatch active" style="background:#4A4A4A" title="Graphite"></div>
+            <div class="swatch"        style="background:#C0C0C0" title="Silver"></div>
+            <div class="swatch"        style="background:#8B4513" title="Bronze"></div>
+            <div class="swatch"        style="background:#F57224" title="Orange"></div>
+          </div>
+          <div class="product-footer">
+            <span class="product-moq">MOQ: <span>10 units</span></span>
+            <button class="btn-view">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="product-card" data-category="wood">
+        <div class="product-img-wrap">
+          <span class="product-tag">Wood</span>
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Walnut Director Chair">
+            <rect x="58" y="52" width="84" height="78" rx="12" fill="#8B4513"/>
+            <rect x="68" y="62" width="64" height="58" rx="8" fill="#A0522D"/>
+            <rect x="50" y="118" width="100" height="16" rx="7" fill="#8B4513"/>
+            <rect x="62" y="134" width="10" height="50" rx="4" fill="#6B3410"/>
+            <rect x="128" y="134" width="10" height="50" rx="4" fill="#6B3410"/>
+            <rect x="44"  y="178" width="38" height="8" rx="4" fill="#5A2D0C"/>
+            <rect x="118" y="178" width="38" height="8" rx="4" fill="#5A2D0C"/>
+            <rect x="42"  y="110" width="10" height="48" rx="4" fill="#6B3410"/>
+            <rect x="148" y="110" width="10" height="48" rx="4" fill="#6B3410"/>
+            <rect x="36"  y="128" width="20" height="8" rx="4" fill="#A0522D"/>
+            <rect x="144" y="128" width="20" height="8" rx="4" fill="#A0522D"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Walnut Director Chair</h3>
+          <p class="product-desc">Solid walnut frame with premium fabric upholstery. Classic boardroom presence.</p>
+          <div class="product-swatches" aria-label="Available colors">
+            <div class="swatch active" style="background:#8B4513" title="Walnut"></div>
+            <div class="swatch"        style="background:#DEB887" title="Beech"></div>
+            <div class="swatch"        style="background:#1A1A1A" title="Ebony"></div>
+            <div class="swatch"        style="background:#D4AF37" title="Oak"></div>
+          </div>
+          <div class="product-footer">
+            <span class="product-moq">MOQ: <span>10 units</span></span>
+            <button class="btn-view">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 5 -->
+      <article class="product-card" data-category="plastic">
+        <div class="product-img-wrap">
+          <span class="product-tag">Plastic</span>
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Poly Cafe Chair">
+            <path d="M62 60 Q100 44 138 60 L132 128 Q100 140 68 128 Z" fill="#F57224"/>
+            <path d="M68 60 Q100 50 132 60 L126 122 Q100 132 74 122 Z" fill="#FFD9C0"/>
+            <rect x="52" y="128" width="96" height="14" rx="7" fill="#F57224"/>
+            <rect x="70" y="142" width="10" height="46" rx="4" fill="#D45F10"/>
+            <rect x="120" y="142" width="10" height="46" rx="4" fill="#D45F10"/>
+            <rect x="46"  y="182" width="44" height="8" rx="4" fill="#D45F10"/>
+            <rect x="110" y="182" width="44" height="8" rx="4" fill="#D45F10"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Poly Cafe Chair</h3>
+          <p class="product-desc">Lightweight polypropylene chair. UV-resistant, ideal for outdoor terraces.</p>
+          <div class="product-swatches" aria-label="Available colors">
+            <div class="swatch active" style="background:#F57224" title="Orange"></div>
+            <div class="swatch"        style="background:#002D62" title="Navy"></div>
+            <div class="swatch"        style="background:#E8E8E8" title="White"></div>
+            <div class="swatch"        style="background:#2ECC71" title="Sage"></div>
+          </div>
+          <div class="product-footer">
+            <span class="product-moq">MOQ: <span>30 units</span></span>
+            <button class="btn-view">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 6 -->
+      <article class="product-card" data-category="office">
+        <div class="product-img-wrap">
+          <span class="product-tag">Office</span>
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mesh Task Chair">
+            <rect x="60" y="50" width="80" height="80" rx="12" fill="#002D62"/>
+            <!-- mesh lines -->
+            <line x1="68" y1="60" x2="68"  y2="122" stroke="#003B80" stroke-width="4"/>
+            <line x1="78" y1="56" x2="78"  y2="126" stroke="#003B80" stroke-width="4"/>
+            <line x1="88" y1="53" x2="88"  y2="127" stroke="#003B80" stroke-width="4"/>
+            <line x1="98" y1="52" x2="98"  y2="128" stroke="#003B80" stroke-width="4"/>
+            <line x1="108" y1="53" x2="108" y2="127" stroke="#003B80" stroke-width="4"/>
+            <line x1="118" y1="56" x2="118" y2="126" stroke="#003B80" stroke-width="4"/>
+            <line x1="128" y1="60" x2="128" y2="122" stroke="#003B80" stroke-width="4"/>
+            <rect x="52" y="130" width="96" height="14" rx="7" fill="#002D62"/>
+            <rect x="90" y="144" width="20" height="32" rx="6" fill="#8A9BB0"/>
+            <ellipse cx="100" cy="182" rx="36" ry="7" fill="#6B7589"/>
+            <circle cx="68"  cy="186" r="5" fill="#333"/>
+            <circle cx="132" cy="186" r="5" fill="#333"/>
+            <circle cx="84"  cy="178" r="5" fill="#333"/>
+            <circle cx="116" cy="178" r="5" fill="#333"/>
+            <rect x="44" y="122" width="10" height="40" rx="4" fill="#002D62"/>
+            <rect x="146" y="122" width="10" height="40" rx="4" fill="#002D62"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Mesh Task Chair</h3>
+          <p class="product-desc">Breathable mesh back with lumbar support. Perfect for open-plan offices.</p>
+          <div class="product-swatches" aria-label="Available colors">
+            <div class="swatch active" style="background:#002D62" title="Navy"></div>
+            <div class="swatch"        style="background:#1A1A1A" title="Black"></div>
+            <div class="swatch"        style="background:#808080" title="Gray"></div>
+            <div class="swatch"        style="background:#F57224" title="Orange"></div>
+          </div>
+          <div class="product-footer">
+            <span class="product-moq">MOQ: <span>10 units</span></span>
+            <button class="btn-view">View Details</button>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /product-grid -->
+  </div>
+</section>
+
+<!-- ========================================
+     PRODUCT DETAILS SECTION
+     ======================================== -->
+<section id="product-details">
+  <div class="container">
+    <div class="pd-grid">
+
+      <!-- LEFT: Images -->
+      <div class="pd-images">
+        <div class="pd-main-img">
+          <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Executive Pro Chair - main image">
+            <!-- Full detailed executive chair -->
+            <rect x="84" y="198" width="132" height="18" rx="9" fill="#F57224"/>
+            <rect x="74" y="178" width="152" height="26" rx="10" fill="#FFD9C0"/>
+            <!-- backrest -->
+            <rect x="84" y="76" width="132" height="110" rx="18" fill="#F57224"/>
+            <rect x="96" y="88" width="108" height="86" rx="12" fill="#FFD9C0"/>
+            <!-- headrest -->
+            <rect x="100" y="46" width="100" height="38" rx="10" fill="#F57224"/>
+            <!-- armrests -->
+            <rect x="60"  y="168" width="18" height="64" rx="8" fill="#D45F10"/>
+            <rect x="222" y="168" width="18" height="64" rx="8" fill="#D45F10"/>
+            <rect x="50"  y="186" width="32" height="10" rx="5" fill="#E8C5A5"/>
+            <rect x="218" y="186" width="32" height="10" rx="5" fill="#E8C5A5"/>
+            <!-- gas lift -->
+            <rect x="142" y="216" width="16" height="54" rx="6" fill="#8A9BB0"/>
+            <!-- base -->
+            <ellipse cx="150" cy="282" rx="64" ry="10" fill="#6B7589"/>
+            <line x1="88"  y1="282" x2="150" y2="262" stroke="#6B7589" stroke-width="6" stroke-linecap="round"/>
+            <line x1="212" y1="282" x2="150" y2="262" stroke="#6B7589" stroke-width="6" stroke-linecap="round"/>
+            <line x1="110" y1="266" x2="150" y2="262" stroke="#6B7589" stroke-width="6" stroke-linecap="round"/>
+            <line x1="190" y1="266" x2="150" y2="262" stroke="#6B7589" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="88"  cy="286" r="9" fill="#333"/>
+            <circle cx="212" cy="286" r="9" fill="#333"/>
+            <circle cx="110" cy="272" r="9" fill="#333"/>
+            <circle cx="190" cy="272" r="9" fill="#333"/>
+            <circle cx="150" cy="286" r="9" fill="#333"/>
+          </svg>
+        </div>
+        <!-- Thumbnails -->
+        <div class="pd-thumbs">
+          <div class="pd-thumb active">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="16" width="40" height="34" rx="6" fill="#F57224"/>
+              <rect x="24" y="20" width="32" height="26" rx="4" fill="#FFD9C0"/>
+              <rect x="20" y="48" width="40" height="8" rx="4" fill="#F57224"/>
+              <rect x="34" y="56" width="12" height="14" rx="4" fill="#8A9BB0"/>
+              <ellipse cx="40" cy="74" rx="18" ry="4" fill="#6B7589"/>
+            </svg>
+          </div>
+          <div class="pd-thumb">
+            <svg viewBox="0 0 80 80" fill="none">
+              <rect x="18" y="14" width="44" height="38" rx="6" fill="#002D62"/>
+              <rect x="24" y="20" width="32" height="26" rx="4" fill="#003B80"/>
+              <rect x="18" y="50" width="44" height="8" rx="4" fill="#002D62"/>
+              <rect x="34" y="58" width="12" height="12" rx="4" fill="#8A9BB0"/>
+              <ellipse cx="40" cy="74" rx="18" ry="4" fill="#6B7589"/>
+            </svg>
+          </div>
+          <div class="pd-thumb">
+            <svg viewBox="0 0 80 80" fill="none">
+              <rect x="16" y="48" width="48" height="12" rx="5" fill="#8B4513"/>
+              <rect x="26" y="18" width="28" height="34" rx="6" fill="#8B4513"/>
+              <rect x="30" y="22" width="20" height="26" rx="4" fill="#A0522D"/>
+              <rect x="28" y="60" width="6" height="14" rx="3" fill="#6B3410"/>
+              <rect x="46" y="60" width="6" height="14" rx="3" fill="#6B3410"/>
+            </svg>
+          </div>
+          <div class="pd-thumb">
+            <svg viewBox="0 0 80 80" fill="none">
+              <ellipse cx="40" cy="28" rx="26" ry="8" fill="#B0BCCF"/>
+              <rect x="36" y="36" width="8" height="24" rx="3" fill="#8A9BB0"/>
+              <ellipse cx="40" cy="66" rx="22" ry="5" fill="#6B7589"/>
+              <circle cx="20" cy="68" r="4" fill="#333"/>
+              <circle cx="60" cy="68" r="4" fill="#333"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Product Info -->
+      <div class="pd-info">
+        <nav class="pd-breadcrumb" aria-label="Breadcrumb">
+          <a href="#catalog">Catalog</a>
+          <span>›</span>
+          <a href="#catalog">Office</a>
+          <span>›</span>
+          <span>Executive Pro Chair</span>
+        </nav>
+
+        <h2 class="pd-title">Executive Pro Chair</h2>
+        <p class="pd-subtitle">
+          The Executive Pro is our flagship ergonomic office chair — built for long working sessions and designed to impress clients. Available in multiple finishes to match your corporate identity.
+        </p>
+
+        <div class="pd-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">4.9 / 5 · 214 B2B orders</span>
+        </div>
+
+        <!-- Technical Specs -->
+        <div class="pd-specs">
+          <h4>Technical Specifications</h4>
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Material</span>
+              <span class="spec-value">Foam + Leatherette / Fabric</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Frame</span>
+              <span class="spec-value">Reinforced Nylon + Steel</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Weight Capacity</span>
+              <span class="spec-value">150 kg</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Net Weight</span>
+              <span class="spec-value">18 kg</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Seat Height</span>
+              <span class="spec-value">46 – 56 cm (adjustable)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Warranty</span>
+              <span class="spec-value">3 Years</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Color Picker -->
+        <div class="pd-colors">
+          <h4>Color: <span class="color-selected">Navy Blue</span></h4>
+          <div class="color-swatches-lg" role="group" aria-label="Color selection">
+            <div class="swatch-lg active" style="background:#002D62" data-name="Navy Blue"      title="Navy Blue"      tabindex="0"></div>
+            <div class="swatch-lg"        style="background:#1A1A1A" data-name="Matte Black"    title="Matte Black"    tabindex="0"></div>
+            <div class="swatch-lg"        style="background:#8B4513" data-name="Brown Leather"  title="Brown Leather"  tabindex="0"></div>
+            <div class="swatch-lg"        style="background:#C0C0C0" data-name="Silver Gray"    title="Silver Gray"    tabindex="0"></div>
+            <div class="swatch-lg"        style="background:#F57224" data-name="Burnt Orange"   title="Burnt Orange"   tabindex="0"></div>
+            <div class="swatch-lg"        style="background:#2ECC71" data-name="Sage Green"     title="Sage Green"     tabindex="0"></div>
+          </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="pd-quantity">
+          <h4>Quantity <span style="font-size:.78rem;color:var(--muted);font-weight:500;">(B2B — minimum 10 units)</span></h4>
+          <div class="qty-wrapper">
+            <div class="qty-control" role="group" aria-label="Quantity selector">
+              <button class="qty-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+              <input class="qty-input" type="number" id="qty-input" value="10" min="10" aria-label="Quantity" />
+              <button class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+            </div>
+            <span class="qty-note">Min. <span>10 units</span> per order</span>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="pd-actions">
+          <button class="btn-add-quote" id="add-to-quote" aria-label="Add to quote">
+            <i class="fa-solid fa-file-circle-plus"></i>
+            Add to Quote
+          </button>
+          <button class="btn-save" aria-label="Save for later" title="Save for later">
+            <i class="fa-regular fa-bookmark"></i>
+          </button>
+        </div>
+      </div><!-- /pd-info -->
+
+    </div><!-- /pd-grid -->
+  </div>
+</section>
+
+<!-- ========================================
+     FOOTER
+     ======================================== -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark">SD</div>
+          <div class="logo-text">
+            <span>Simo Deco</span>
+            <span>B2B Furniture</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Algeria's premier B2B furniture partner. We equip offices, hotels, restaurants, and clinics with elegant, locally-crafted furniture — built to last and priced for business.
+        </p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <!-- Trust badge -->
+        <div class="trust-badge" aria-label="Buy Local badge">
+          <span class="tb-icon">🇩🇿</span>
+          <div class="tb-text">
+            <strong>Buy Local · Buy Algerian</strong>
+            <span>Proudly manufactured in Algeria</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#catalog">B2B Catalog</a></li>
+          <li><a href="#features">CHR Sector</a></li>
+          <li><a href="#product-details">Request Quote</a></li>
+          <li><a href="#features">About Us</a></li>
+          <li><a href="#">Download Catalog (PDF)</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="footer-col">
+        <h4>Product Categories</h4>
+        <ul class="footer-links">
+          <li><a href="#catalog">Office Furniture</a></li>
+          <li><a href="#catalog">CHR Seating</a></li>
+          <li><a href="#catalog">Metal Collection</a></li>
+          <li><a href="#catalog">Wood Collection</a></li>
+          <li><a href="#catalog">Plastic &amp; Poly</a></li>
+          <li><a href="#catalog">Custom Orders</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <span class="ci">📍</span>
+            <div class="ct">
+              <strong>Address</strong>
+              Zone Industrielle, Rouiba<br>Alger 16012, Algeria
+            </div>
+          </li>
+          <li class="contact-item">
+            <span class="ci">📞</span>
+            <div class="ct">
+              <strong>Phone / WhatsApp</strong>
+              <a href="tel:+213555000000">+213 555 00 00 00</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <span class="ci">✉️</span>
+            <div class="ct">
+              <strong>Email</strong>
+              <a href="mailto:contact@simodeco.dz">contact@simodeco.dz</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <span class="ci">🕐</span>
+            <div class="ct">
+              <strong>Working Hours</strong>
+              Sun–Thu: 08:00 – 17:30
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+      <p>© 2024 <a href="#hero">Simo Deco</a>. All rights reserved. B2B Furniture Algeria.</p>
+      <p>Designed with ❤️ in Algeria · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Scroll to top button -->
+<button id="scroll-top" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<!-- Toast notification -->
+<div id="toast" role="status" aria-live="polite">
+  <span class="toast-icon">✅</span>
+  <span class="toast-msg"></span>
+</div>
+
+<!-- Main JS -->
+<script src="js/main.js"></script>
+</body>
+</html>
