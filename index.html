@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simo Deco – Premium B2B Furniture</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       TOP BAR
+  ══════════════════════════════════════════════ -->
+  <div class="top-bar" id="topBar">
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <span>🚚 Free delivery on orders over 500 000 DA &nbsp;|&nbsp; ✅ 100% Local Manufacturing &nbsp;|&nbsp; 📐 Free 3D Design Included &nbsp;|&nbsp; 🏨 Trusted by 200+ Hotels &amp; Restaurants &nbsp;|&nbsp; ⭐ 15+ Years of Excellence &nbsp;|&nbsp;</span>
+        <span aria-hidden="true">🚚 Free delivery on orders over 500 000 DA &nbsp;|&nbsp; ✅ 100% Local Manufacturing &nbsp;|&nbsp; 📐 Free 3D Design Included &nbsp;|&nbsp; 🏨 Trusted by 200+ Hotels &amp; Restaurants &nbsp;|&nbsp; ⭐ 15+ Years of Excellence &nbsp;|&nbsp;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <svg class="logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="44" height="44" rx="8" fill="#002D62"/>
+          <rect x="8" y="24" width="28" height="5" rx="2" fill="#F57224"/>
+          <rect x="10" y="18" width="24" height="6" rx="2" fill="white"/>
+          <rect x="12" y="29" width="4" height="8" rx="1" fill="#F57224"/>
+          <rect x="28" y="29" width="4" height="8" rx="1" fill="#F57224"/>
+        </svg>
+        <span class="logo-text">Simo<span class="logo-accent">Deco</span></span>
+      </a>
+
+      <!-- Nav Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#catalog" class="nav-link">B2B Catalog</a>
+        <a href="#chr" class="nav-link">CHR Sector</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="nav-right">
+        <!-- Language Switcher -->
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-flag" id="langFlag">🇬🇧</span>
+            <span id="langLabel">EN</span>
+            <svg class="chevron" viewBox="0 0 16 16" fill="currentColor"><path d="M4 6l4 4 4-4"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li role="option" data-lang="en" data-flag="🇬🇧" class="active">🇬🇧 English</li>
+            <li role="option" data-lang="fr" data-flag="🇫🇷">🇫🇷 Français</li>
+            <li role="option" data-lang="ar" data-flag="🇩🇿">🇩🇿 العربية</li>
+          </ul>
+        </div>
+
+        <!-- Quote Button -->
+        <button class="btn-quote" id="quoteBtn" onclick="document.getElementById('quoteModal').classList.add('open')">
+          Request Quote
+          <span class="quote-badge" id="quoteBadge">0</span>
+        </button>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+
+      <!-- Left: Text -->
+      <div class="hero-text" data-animate="fadeInLeft">
+        <p class="hero-eyebrow">B2B Premium Furniture</p>
+        <h1 class="hero-headline">
+          Elegant Furniture<br/>
+          That Enhances Your<br/>
+          <span class="headline-accent">Workspace</span>
+        </h1>
+        <p class="hero-desc">
+          Designed for hotels, restaurants, offices, and clinics. Crafted in Algeria,
+          built for excellence. Every piece is tailored to your brand identity and space requirements.
+        </p>
+        <div class="hero-actions">
+          <a href="#catalog" class="btn btn-primary">Browse Catalog</a>
+          <a href="#contact" class="btn btn-outline">Free Consultation</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>15+</strong><span>Years Exp.</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>200+</strong><span>B2B Clients</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>58</strong><span>Wilayas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Carousel -->
+      <div class="hero-carousel" data-animate="fadeInRight">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide active">
+            <img src="https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=520&h=560&fit=crop&auto=format" alt="Ergonomic Office Chair" />
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=520&h=560&fit=crop&auto=format" alt="Premium Hotel Chair" />
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=520&h=560&fit=crop&auto=format" alt="Restaurant Seating" />
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=520&h=560&fit=crop&auto=format" alt="Modern Office Chair" />
+          </div>
+        </div>
+        <div class="carousel-dots" id="carouselDots">
+          <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+          <button class="dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="dot" data-index="2" aria-label="Slide 3"></button>
+          <button class="dot" data-index="3" aria-label="Slide 4"></button>
+        </div>
+        <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous">&#8249;</button>
+        <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next">&#8250;</button>
+
+        <!-- Floating Badge -->
+        <div class="floating-badge" id="floatingBadge">
+          <span class="badge-icon">🚚</span>
+          <div>
+            <strong>Fast Delivery</strong>
+            <span>to all 58 Wilayas</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FEATURES SECTION
+  ══════════════════════════════════════════════ -->
+  <section class="features" id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Why Choose Simo Deco</p>
+        <h2 class="section-title">Built on Trust. Defined by Quality.</h2>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card" data-animate="fadeInUp">
+          <div class="feature-icon trust">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="#002D62" stroke-width="2"/>
+              <path d="M24 8 L28 18 L39 18 L30 25 L33 36 L24 29 L15 36 L18 25 L9 18 L20 18 Z" fill="#002D62" opacity=".15" stroke="#002D62" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">15+ Years of Trust</h3>
+          <p class="feature-desc">
+            Since 2009, Simo Deco has equipped hundreds of businesses across Algeria with premium furniture solutions tailored for professional environments.
+          </p>
+          <ul class="feature-list">
+            <li>200+ satisfied B2B clients</li>
+            <li>Warranty on all products</li>
+            <li>After-sales support</li>
+          </ul>
+        </div>
+
+        <div class="feature-card featured" data-animate="fadeInUp" style="--delay:.1s">
+          <div class="feature-icon quality">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="12" width="40" height="28" rx="4" stroke="#F57224" stroke-width="2"/>
+              <path d="M16 26 L21 31 L32 20" stroke="#F57224" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="14" y="4" width="6" height="10" rx="2" fill="#F57224"/>
+              <rect x="28" y="4" width="6" height="10" rx="2" fill="#F57224"/>
+            </svg>
+          </div>
+          <span class="feature-badge">Most Popular</span>
+          <h3 class="feature-title">100% Local Manufacturing</h3>
+          <p class="feature-desc">
+            Every piece is manufactured in Algeria using premium materials. Supporting local industry while delivering world-class furniture quality you can be proud of.
+          </p>
+          <ul class="feature-list">
+            <li>Made in Algeria 🇩🇿</li>
+            <li>Premium raw materials</li>
+            <li>Custom dimensions available</li>
+          </ul>
+        </div>
+
+        <div class="feature-card" data-animate="fadeInUp" style="--delay:.2s">
+          <div class="feature-icon service">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="6" width="36" height="28" rx="4" stroke="#002D62" stroke-width="2"/>
+              <path d="M16 42 L32 42 M24 34 L24 42" stroke="#002D62" stroke-width="2" stroke-linecap="round"/>
+              <rect x="12" y="12" width="24" height="16" rx="2" fill="#002D62" opacity=".1" stroke="#002D62" stroke-width="1.5"/>
+              <path d="M18 20 L22 20 M26 20 L30 20 M18 16 L30 16 M18 24 L24 24" stroke="#002D62" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Free 3D Design Service</h3>
+          <p class="feature-desc">
+            Visualize your space before ordering. Our design team creates professional 3D renders of your project for free, helping you make the right decisions confidently.
+          </p>
+          <ul class="feature-list">
+            <li>Professional 3D renders</li>
+            <li>Space planning included</li>
+            <li>Delivered in 48 hours</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CATALOG SECTION
+  ══════════════════════════════════════════════ -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Our Products</p>
+        <h2 class="section-title">Corporate Catalog</h2>
+        <p class="section-subtitle">Browse our complete range of professional furniture for every sector</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="office">Office</button>
+        <button class="filter-btn" data-filter="chr">CHR</button>
+        <button class="filter-btn" data-filter="metal">Metal</button>
+        <button class="filter-btn" data-filter="wood">Wood</button>
+        <button class="filter-btn" data-filter="plastic">Plastic</button>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="productGrid">
+
+        <article class="product-card" data-category="office wood" data-animate="fadeInUp">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=400&h=320&fit=crop&auto=format" alt="Executive Office Chair" loading="lazy" />
+            <span class="product-tag">Office</span>
+          </div>
+          <div class="product-info">
+            <div class="product-colors">
+              <button class="swatch" style="background:#1a1a1a" title="Black" aria-label="Black"></button>
+              <button class="swatch" style="background:#8B4513" title="Brown" aria-label="Brown"></button>
+              <button class="swatch" style="background:#708090" title="Gray" aria-label="Gray"></button>
+            </div>
+            <h3 class="product-name">Executive Office Chair</h3>
+            <p class="product-sku">SKU: SDO-2024-001</p>
+            <button class="btn-view" onclick="openProductDetail('Executive Office Chair', 'https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=600&h=500&fit=crop', 'office')">View Details</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="chr metal" data-animate="fadeInUp" style="--delay:.05s">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=320&fit=crop&auto=format" alt="Hotel Lobby Chair" loading="lazy" />
+            <span class="product-tag chr">CHR</span>
+          </div>
+          <div class="product-info">
+            <div class="product-colors">
+              <button class="swatch" style="background:#F57224" title="Orange" aria-label="Orange"></button>
+              <button class="swatch" style="background:#002D62" title="Navy" aria-label="Navy"></button>
+              <button class="swatch" style="background:#C0C0C0" title="Silver" aria-label="Silver"></button>
+            </div>
+            <h3 class="product-name">Hotel Lobby Chair</h3>
+            <p class="product-sku">SKU: SDC-2024-012</p>
+            <button class="btn-view" onclick="openProductDetail('Hotel Lobby Chair', 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&h=500&fit=crop', 'chr')">View Details</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="chr wood" data-animate="fadeInUp" style="--delay:.1s">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=320&fit=crop&auto=format" alt="Restaurant Sofa Set" loading="lazy" />
+            <span class="product-tag chr">CHR</span>
+          </div>
+          <div class="product-info">
+            <div class="product-colors">
+              <button class="swatch" style="background:#8B4513" title="Walnut" aria-label="Walnut"></button>
+              <button class="swatch" style="background:#DEB887" title="Oak" aria-label="Oak"></button>
+              <button class="swatch" style="background:#2F4F4F" title="Dark Green" aria-label="Dark Green"></button>
+            </div>
+            <h3 class="product-name">Restaurant Sofa Set</h3>
+            <p class="product-sku">SKU: SDC-2024-023</p>
+            <button class="btn-view" onclick="openProductDetail('Restaurant Sofa Set', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=500&fit=crop', 'chr')">View Details</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="office metal" data-animate="fadeInUp" style="--delay:.15s">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&h=320&fit=crop&auto=format" alt="Mesh Task Chair" loading="lazy" />
+            <span class="product-tag">Office</span>
+          </div>
+          <div class="product-info">
+            <div class="product-colors">
+              <button class="swatch" style="background:#1a1a1a" title="Black" aria-label="Black"></button>
+              <button class="swatch" style="background:#ffffff;border:1px solid #ddd" title="White" aria-label="White"></button>
+              <button class="swatch" style="background:#4169E1" title="Blue" aria-label="Blue"></button>
+            </div>
+            <h3 class="product-name">Mesh Task Chair</h3>
+            <p class="product-sku">SKU: SDO-2024-034</p>
+            <button class="btn-view" onclick="openProductDetail('Mesh Task Chair', 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&h=500&fit=crop', 'office')">View Details</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="metal plastic" data-animate="fadeInUp" style="--delay:.2s">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400&h=320&fit=crop&auto=format" alt="Stackable Metal Chair" loading="lazy" />
+            <span class="product-tag metal">Metal</span>
+          </div>
+          <div class="product-info">
+            <div class="product-colors">
+              <button class="swatch" style="background:#C0C0C0" title="Silver" aria-label="Silver"></button>
+              <button class="swatch" style="background:#1a1a1a" title="Matte Black" aria-label="Matte Black"></button>
+              <button class="swatch" style="background:#B8860B" title="Gold" aria-label="Gold"></button>
+            </div>
+            <h3 class="product-name">Stackable Metal Chair</h3>
+            <p class="product-sku">SKU: SDM-2024-045</p>
+            <button class="btn-view" onclick="openProductDetail('Stackable Metal Chair', 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600&h=500&fit=crop', 'metal')">View Details</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="wood office" data-animate="fadeInUp" style="--delay:.25s">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&h=320&fit=crop&auto=format" alt="Executive Wooden Desk" loading="lazy" />
+            <span class="product-tag wood">Wood</span>
+          </div>
+          <div class="product-info">
+            <div class="product-colors">
+              <button class="swatch" style="background:#8B4513" title="Walnut" aria-label="Walnut"></button>
+              <button class="swatch" style="background:#DEB887" title="Natural Oak" aria-label="Natural Oak"></button>
+              <button class="swatch" style="background:#1a1a1a" title="Wenge" aria-label="Wenge"></button>
+            </div>
+            <h3 class="product-name">Executive Wooden Desk</h3>
+            <p class="product-sku">SKU: SDW-2024-056</p>
+            <button class="btn-view" onclick="openProductDetail('Executive Wooden Desk', 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&h=500&fit=crop', 'wood')">View Details</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="plastic chr" data-animate="fadeInUp" style="--delay:.3s">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=400&h=320&fit=crop&auto=format" alt="Polycarbonate Chair" loading="lazy" />
+            <span class="product-tag plastic">Plastic</span>
+          </div>
+          <div class="product-info">
+            <div class="product-colors">
+              <button class="swatch" style="background:rgba(255,255,255,0.8);border:1px solid #ccc" title="Clear" aria-label="Clear"></button>
+              <button class="swatch" style="background:#002D62" title="Navy" aria-label="Navy"></button>
+              <button class="swatch" style="background:#F57224" title="Orange" aria-label="Orange"></button>
+            </div>
+            <h3 class="product-name">Polycarbonate Chair</h3>
+            <p class="product-sku">SKU: SDP-2024-067</p>
+            <button class="btn-view" onclick="openProductDetail('Polycarbonate Chair', 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&h=500&fit=crop', 'plastic')">View Details</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="chr metal" data-animate="fadeInUp" style="--delay:.35s">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571781418606-70265b9cce90?w=400&h=320&fit=crop&auto=format" alt="Bistro Bar Stool" loading="lazy" />
+            <span class="product-tag chr">CHR</span>
+          </div>
+          <div class="product-info">
+            <div class="product-colors">
+              <button class="swatch" style="background:#1a1a1a" title="Black" aria-label="Black"></button>
+              <button class="swatch" style="background:#8B4513" title="Brown" aria-label="Brown"></button>
+              <button class="swatch" style="background:#C0C0C0" title="Chrome" aria-label="Chrome"></button>
+            </div>
+            <h3 class="product-name">Bistro Bar Stool</h3>
+            <p class="product-sku">SKU: SDC-2024-078</p>
+            <button class="btn-view" onclick="openProductDetail('Bistro Bar Stool', 'https://images.unsplash.com/photo-1571781418606-70265b9cce90?w=600&h=500&fit=crop', 'chr')">View Details</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="office wood metal" data-animate="fadeInUp" style="--delay:.4s">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=400&h=320&fit=crop&auto=format" alt="Conference Table" loading="lazy" />
+            <span class="product-tag">Office</span>
+          </div>
+          <div class="product-info">
+            <div class="product-colors">
+              <button class="swatch" style="background:#1a1a1a" title="Wenge" aria-label="Wenge"></button>
+              <button class="swatch" style="background:#DEB887" title="Oak" aria-label="Oak"></button>
+              <button class="swatch" style="background:#808080" title="Gray" aria-label="Gray"></button>
+            </div>
+            <h3 class="product-name">Conference Table</h3>
+            <p class="product-sku">SKU: SDO-2024-089</p>
+            <button class="btn-view" onclick="openProductDetail('Conference Table', 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&h=500&fit=crop', 'office')">View Details</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CHR SECTOR SECTION
+  ══════════════════════════════════════════════ -->
+  <section class="chr-section" id="chr">
+    <div class="container">
+      <div class="chr-inner">
+        <div class="chr-text" data-animate="fadeInLeft">
+          <p class="section-eyebrow light">Specialized Solutions</p>
+          <h2 class="section-title light">Furniture for the<br/>CHR Sector</h2>
+          <p class="chr-desc">
+            Hotels, restaurants, cafés, and event venues demand furniture that is both durable and aesthetically exceptional. Simo Deco delivers purpose-built collections designed for high-traffic professional environments.
+          </p>
+          <div class="chr-sectors">
+            <div class="sector-chip">🏨 Hotels</div>
+            <div class="sector-chip">🍽️ Restaurants</div>
+            <div class="sector-chip">☕ Cafés</div>
+            <div class="sector-chip">🏥 Clinics</div>
+            <div class="sector-chip">🎪 Event Venues</div>
+          </div>
+          <a href="#catalog" class="btn btn-primary mt-2">View CHR Collection</a>
+        </div>
+        <div class="chr-image" data-animate="fadeInRight">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=560&h=420&fit=crop&auto=format" alt="CHR Restaurant Setup" />
+          <div class="chr-stat-card">
+            <strong>500+</strong>
+            <span>Projects Delivered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a href="#" class="logo logo-light">
+          <svg class="logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="8" fill="#F57224"/>
+            <rect x="8" y="24" width="28" height="5" rx="2" fill="white"/>
+            <rect x="10" y="18" width="24" height="6" rx="2" fill="white" opacity=".8"/>
+            <rect x="12" y="29" width="4" height="8" rx="1" fill="white"/>
+            <rect x="28" y="29" width="4" height="8" rx="1" fill="white"/>
+          </svg>
+          <span class="logo-text">Simo<span class="logo-accent-light">Deco</span></span>
+        </a>
+        <p class="footer-desc">
+          Algeria's leading B2B furniture manufacturer. Delivering premium, locally crafted furniture solutions for hotels, restaurants, offices, and clinics since 2009.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#catalog">B2B Catalog</a></li>
+          <li><a href="#chr">CHR Sector</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-heading">Collections</h4>
+        <ul>
+          <li><a href="#">Office Furniture</a></li>
+          <li><a href="#">Hotel &amp; Hospitality</a></li>
+          <li><a href="#">Restaurant Seating</a></li>
+          <li><a href="#">Clinic Furniture</a></li>
+          <li><a href="#">Custom Projects</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4 class="footer-heading">Contact Us</h4>
+        <address>
+          <p>
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Rue des Artisans, Zone Industrielle,<br/>Alger, Algeria
+          </p>
+          <p>
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.9-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
+            +213 (0) 555 123 456
+          </p>
+          <p>
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contact@simodeco.dz
+          </p>
+        </address>
+        <!-- Buy Local Badge -->
+        <div class="buy-local-badge">
+          <span class="badge-flag">🇩🇿</span>
+          <div>
+            <strong>Buy Local</strong>
+            <span>Proudly Algerian</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2024 Simo Deco. All rights reserved. | Designed with ❤️ in Algeria</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       PRODUCT DETAIL MODAL
+  ══════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="document.getElementById('productModal').classList.remove('open')" aria-label="Close">&times;</button>
+      <div class="modal-inner">
+
+        <div class="modal-image">
+          <img id="modalImg" src="" alt="" />
+        </div>
+
+        <div class="modal-content">
+          <span class="product-tag" id="modalTag">Office</span>
+          <h2 id="modalTitle">Product Title</h2>
+          <p id="modalDesc" class="modal-desc">
+            Premium B2B grade furniture crafted from high-quality materials. Ergonomically designed for long-term professional use. Available in multiple configurations to suit your business environment.
+          </p>
+
+          <!-- Specs -->
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Material</span>
+              <span class="spec-value" id="specMaterial">High-density foam, Steel frame</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value" id="specWeight">12 kg</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Lead Time</span>
+              <span class="spec-value">7–14 days</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Warranty</span>
+              <span class="spec-value">2 Years</span>
+            </div>
+          </div>
+
+          <!-- Color Picker -->
+          <div class="color-picker">
+            <p class="picker-label">Color: <strong id="colorLabel">Black</strong></p>
+            <div class="picker-swatches">
+              <button class="swatch large active" style="background:#1a1a1a" data-color="Black" title="Black" aria-label="Black" onclick="selectColor(this,'Black')"></button>
+              <button class="swatch large" style="background:#8B4513" data-color="Walnut Brown" title="Walnut Brown" aria-label="Walnut Brown" onclick="selectColor(this,'Walnut Brown')"></button>
+              <button class="swatch large" style="background:#708090" data-color="Slate Gray" title="Slate Gray" aria-label="Slate Gray" onclick="selectColor(this,'Slate Gray')"></button>
+              <button class="swatch large" style="background:#002D62" data-color="Navy Blue" title="Navy Blue" aria-label="Navy Blue" onclick="selectColor(this,'Navy Blue')"></button>
+              <button class="swatch large" style="background:#F57224" data-color="Orange" title="Orange" aria-label="Orange" onclick="selectColor(this,'Orange')"></button>
+            </div>
+          </div>
+
+          <!-- Quantity Selector -->
+          <div class="qty-selector">
+            <label class="picker-label">B2B Quantity <span class="min-note">(min. 10 units)</span></label>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="changeQty(-10)" aria-label="Decrease quantity">−</button>
+              <input type="number" class="qty-input" id="qtyInput" value="10" min="10" step="10" aria-label="Quantity" />
+              <button class="qty-btn" onclick="changeQty(10)" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-full" onclick="addToQuote()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+            Add to Quote
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       QUOTE MODAL
+  ══════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="quoteModal">
+    <div class="modal-box quote-modal-box">
+      <button class="modal-close" onclick="document.getElementById('quoteModal').classList.remove('open')" aria-label="Close">&times;</button>
+      <h2 class="quote-modal-title">Your Quote Request</h2>
+      <div id="quoteList" class="quote-list">
+        <p class="empty-quote">No items yet. Browse the catalog and add products.</p>
+      </div>
+      <form class="quote-form" id="quoteForm" onsubmit="submitQuote(event)">
+        <h3>Your Information</h3>
+        <div class="form-row">
+          <input type="text" placeholder="Company Name *" required aria-label="Company Name" />
+          <input type="text" placeholder="Contact Person *" required aria-label="Contact Person" />
+        </div>
+        <div class="form-row">
+          <input type="email" placeholder="Email Address *" required aria-label="Email" />
+          <input type="tel" placeholder="Phone Number *" required aria-label="Phone" />
+        </div>
+        <textarea placeholder="Additional notes or requirements…" rows="3" aria-label="Notes"></textarea>
+        <button type="submit" class="btn btn-primary btn-full">Send Quote Request 🚀</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
